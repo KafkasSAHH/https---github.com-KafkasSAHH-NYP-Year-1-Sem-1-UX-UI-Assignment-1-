@@ -1,0 +1,45 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+.event-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h2 {
+    color: #dc3545;
+}
+
+.event-card p {
+    color: #6c757d;
+}
+
+.event-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.event-date {
+    font-weight: bold;
+    color: #28a745;
+}
+
+div img {
+    max-width: 20vw;
+    max-height: 300px;
+    height: auto;
+    border-radius: 5px;
+}

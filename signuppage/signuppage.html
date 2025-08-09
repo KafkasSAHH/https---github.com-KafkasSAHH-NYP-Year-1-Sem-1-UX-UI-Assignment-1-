@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Signup.css">
+    <link rel="stylesheet" href="../UniCSS/Header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>SignUpPage</title>
+</head>
+
+<body>
+<header>
+    <div class="header-container">
+        <a href="../mainPage/mainpage2.html">
+            <img src="../Pictures/NavBar/NYP-logo.png" class="logo" alt="NYP Logo">
+        </a>
+        <div class="nav-menu">
+            <a class="a" href="../EventsPage/Events.html">Events</a>
+            <a class="a" href="../signuppage/signuppage.html">Registration</a>
+            <a class="a" href="../ContactUsPage/ContactUs.html">Contact Us</a>
+            <a class="a" href="../AboutUsPage/AboutUs.html">About Us</a>
+        </div>
+    </div>
+</header>
+
+<main class="container my-5" style="margin-top: 100px !important;">
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow" style="position: static !important;">
+            <div class="card-header bg-danger text-white">
+                <h2 class="text-center mb-0">Badminton CCA Sign Up</h2>
+            </div>
+            <div class="card-body p-4">
+                <form id="ccaSignupForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentId" class="form-label">Student ID</label>
+                        <input type="text" class="form-control" id="studentId" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">NYP Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="experience" class="form-label">Badminton Experience Level</label>
+                        <select class="form-select" id="experience" required>
+                            <option value="" selected disabled>Select your experience level</option>
+                            <option value="beginner">Beginner (Never played before)</option>
+                            <option value="casual">Casual (Play occasionally)</option>
+                            <option value="intermediate">Intermediate (School team/Regular player)</option>
+                            <option value="advanced">Advanced (Competitive experience)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Available Training Days</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="monday" value="Monday">
+                            <label class="form-check-label" for="monday">Monday</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="wednesday" value="Wednesday">
+                            <label class="form-check-label" for="wednesday">Wednesday</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="friday" value="Friday">
+                            <label class="form-check-label" for="friday">Friday</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Additional Information (Optional)</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label" for="terms">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a></label>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-danger">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>By joining the Badminton CCA, you agree to:</p>
+                <ol>
+                    <li>Attend at least 80% of training sessions</li>
+                    <li>Maintain good sportsmanship and behavior</li>
+                    <li>Pay the CCA fees (if applicable)</li>
+                    <li>Represent the school in competitions when selected</li>
+                    <li>Bring your own equipment (racket, shoes, etc.)</li>
+                </ol>
+                <p>Failure to comply may result in removal from the CCA.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3" id="successAlert" style="display: none; z-index: 9999;">
+    <strong>Success!</strong> Your application has been submitted.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</body>
+
+<footer class="bg-dark text-white pt-4 pb-3">
+<div class="container">
+    <div class="row">
+    <div class="col-md-6 mb-4">
+        <h5 class="text-danger mb-3 border-bottom pb-2">Find Your Way Around</h5>
+        <ul class="list-unstyled">
+            <li class="mb-2">
+                <a href="#events" class="text-decoration-none text-white-50 hover-white">
+                    <i class="fas fa-calendar-alt me-2"></i> Events
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#registration" class="text-decoration-none text-white-50 hover-white">
+                    <i class="fas fa-user-edit me-2"></i> Registration
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#contact" class="text-decoration-none text-white-50 hover-white">
+                    <i class="fas fa-envelope me-2"></i> Contact Us
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#about" class="text-decoration-none text-white-50 hover-white">
+                    <i class="fas fa-info-circle me-2"></i> About Us
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <h5 class="text-danger mb-3 border-bottom pb-2">Information</h5>
+        <ul class="list-unstyled">
+            <li class="mb-3">
+                <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                Come visit us at:<br>
+                600 Upper Changi Road East<br>
+                Singapore 486150
+            </li>
+            <li class="mb-3">
+                <i class="fas fa-phone-alt text-danger me-2"></i>
+                Mobile Number: <br>
+                +65 1234 5678
+            </li>
+            <li class="mb-3">
+                <i class="fas fa-envelope text-danger me-2"></i>
+                Drop us an email:<br>
+                <a href="mailto:contact@example.com" class="text-decoration-none text-white-50 hover-white">contactNYP@nyp.edu.sg</a>
+            </li>
+        </ul>
+
+        <h5 class="text-danger mt-4 mb-3 border-bottom pb-2">Follow Our Journey</h5>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/nanyangpoly" class="text-white me-3" target="_blank" rel="noopener noreferrer" title="Our Facebook">
+                <i class="fab fa-facebook-f fs-5 hover-red"></i>
+            </a>
+            <a href="https://www.instagram.com/nanyangpoly/" class="text-white me-3" target="_blank" rel="noopener noreferrer" title="Our Instagram">
+                <i class="fab fa-instagram fs-5 hover-red"></i>
+            </a>
+            <a href="https://twitter.com/nanyangpoly" class="text-white me-3" target="_blank" rel="noopener noreferrer" title="Our Twitter">
+                <i class="fab fa-twitter fs-5 hover-red"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4 pt-3 border-top border-secondary">
+    <div class="col-12 text-center">
+        <p class="mb-0 text-white-50 small">
+            © 2025 Nanyang Polytechnic. All rights reserved.<br>
+            <small>Made by Matthias and Lionel</small>
+        </p>
+    </div>
+</div>
+</div>
+</footer>
+</html>
